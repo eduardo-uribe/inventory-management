@@ -21,6 +21,7 @@ fetch('https://inventory-management-1kaz.onrender.com/api/products')
       <th>Description</th>
       <th>Quantity</th>
     </tr>
+    <div v-if="loading" class="loading">Loading...</div>
     <tr v-for="row in tabledata" :key="row.id">
       <td>{{ row.product_code }}</td>
       <td>{{ row.product_category }}</td>
@@ -29,7 +30,6 @@ fetch('https://inventory-management-1kaz.onrender.com/api/products')
       <td>{{ row.product_quantity }}</td>
     </tr>
   </table>
-  <div v-if="loading" class="loading">Loading...</div>
 </template>
 
 <style>
