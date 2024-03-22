@@ -1,15 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 
-const tabledata = ref(null);
-const loading = ref(true);
-const error = ref(null);
-
-fetch('https://inventory-management-1kaz.onrender.com/api/products')
-  .then((res) => res.json())
-  .then((json) => (tabledata.value = json))
-  .catch((err) => (error.value = err))
-  .finally(() => (loading.value = false));
+defineProps(['tabledata', 'loading', 'error']);
 </script>
 
 <template>
@@ -40,6 +32,8 @@ td {
 }
 
 table {
+  border: solid 1px #eee;
+  width: 85ch;
   border-collapse: collapse;
   height: min-content;
   margin-top: 5rem;
