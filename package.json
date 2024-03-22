@@ -1,0 +1,23 @@
+{
+  "name": "inventory-management",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "server": "node ./src/backend/server.js",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.1",
+    "postgres": "^3.4.4",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "vite": "^5.2.0"
+  }
+}
